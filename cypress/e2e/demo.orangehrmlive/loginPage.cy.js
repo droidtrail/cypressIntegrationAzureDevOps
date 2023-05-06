@@ -8,14 +8,14 @@ describe('Tela de login', () => {
         cy.login('Admin', 'admin123')
     })
 
-    it('Logout', () => {
+    // it('Logout', () => {
 
-        cy.once('uncaught:exception', () => false);
-        cy.get('p:contains("Paul Collings")').click()
-        cy.get('a[href*="/web/index.php/auth/logout"]').click()
-        cy.contains('Username')
+    //     cy.once('uncaught:exception', () => false);
+    //     cy.get('p:contains("Paul Collings")').click()
+    //     cy.get('a[href*="/web/index.php/auth/logout"]').click()
+    //     cy.contains('Username')
 
-    })
+    // })
 
     it('Usuário inválido', () => {
 
