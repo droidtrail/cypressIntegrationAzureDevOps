@@ -38,7 +38,7 @@ describe('Tela de Admin', () => {
         cy.login('Admin', 'admin123')
     })
 
-//TODO Terminar o cadastro de usuário Adm
+//TODO Terminar o cadastro de usuário Admin
     it('Add usuário Admin', () => {
 
         cy.get('span').contains('Admin').click()
