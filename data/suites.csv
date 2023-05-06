@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat May 06 06:26:38 UTC 2023","Sat May 06 06:26:38 UTC 2023","35","","Tela de login","","","","Acessar página de login com sucesso",""
+"passed","Sat May 06 06:26:41 UTC 2023","Sat May 06 06:26:44 UTC 2023","2751","","Tela de login","","","","Senha inválida",""
+"passed","Sat May 06 06:26:38 UTC 2023","Sat May 06 06:26:41 UTC 2023","2521","","Tela de login","","","","Usuário inválido",""
