@@ -16,7 +16,7 @@ describe('Validar menu bar', () => {
     it('Acessar Catalog / Products', () => {
         cy.get('p').contains('Catalog').click()
         cy.get('p').contains(' Products').click()
-        cy.contains('Add new')
+        cy.contains('Add ne')
         
     })
 })
