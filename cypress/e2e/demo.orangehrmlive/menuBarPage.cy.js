@@ -17,7 +17,7 @@ describe('Validar menu bar', () => {
         cy.get('p').contains('Catalog').click()
         cy.get('p').contains(' Products').click()
         // cy.get('a[href*="/Admin/Product/Create"]').should('have.text','\n\nAdd new\n')
-        cy.get('a[href*="/Admin/Product/Create"]').should($el => expect($el.text().trim()).to.equal('Add ne'));
+        cy.get('a[href*="/Admin/Product/Create"]').should($el => expect($el.text().trim()).to.equal('Add nw'));
         
         
     })
