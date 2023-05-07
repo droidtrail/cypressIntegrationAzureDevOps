@@ -16,9 +16,12 @@ describe('Validar menu bar', () => {
     it('Acessar Catalog / Products', () => {
         cy.get('p').contains('Catalog').click()
         cy.get('p').contains(' Products').click()
-        // cy.get('a[href*="/Admin/Product/Create"]').should('have.text','\n\nAdd new\n')
-        cy.get('a[href*="/Admin/Product/Create"]').should($el => expect($el.text().trim()).to.equal('Add nw'));
-        
-        
+        cy.get('label[for="SearchProductName"]').should($el => expect($el.text().trim()).to.equal('Product name'));
+    })
+
+    it('Acessar Catalog / Manufacturers', () => {
+        cy.get('p').contains('Catalog').click()
+        cy.get('p').contains('Manufacturers').click()
+        cy.get('label[for="SearchManufacturerName"]').should($el => expect($el.text().trim()).to.equal('Manufacturer name'));
     })
 })
