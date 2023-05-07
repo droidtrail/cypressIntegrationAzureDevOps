@@ -27,5 +27,4 @@ build/Release
 node_modules
 cypress/videos
 cypress/screenshots
-allure-report
 package-lock.json
