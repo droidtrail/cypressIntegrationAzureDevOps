@@ -5,45 +5,26 @@ import '../../support/commands.js'
 describe('Tela de login', () => {
 
     before(() => {
-        cy.login('Admin', 'admin123')
+        cy.login('admin@yourstore.com', 'admin')
     })
 
-    // it('Logout', () => {
+    it('Logout', () => {
+        cy.get('a[href*="/logout"]').click()
+        cy.contains('Welcome, please sign in!')
 
-    //     cy.once('uncaught:exception', () => false);
-    //     cy.get('p:contains("Paul Collings")').click()
-    //     cy.get('a[href*="/web/index.php/auth/logout"]').click()
-    //     cy.contains('Username')
-
-    // })
+    })
 
     it('Usuário inválido', () => {
 
-        cy.login('Admi', 'admin123')
-        cy.contains('Invalid credential')
+        cy.login('admin@yourstore', 'admin')
+        cy.contains('Login was unsuccessful. Please correct the errors and try again.No customer account found')
 
     })
 
     it('Senha inválida', () => {
 
-        cy.login('Admin', 'admin12')
-        cy.contains('Invalid credential')
+        cy.login('admin@yourstore.com', 'adm')
+        cy.contains('Login was unsuccessful. Please correct the errors and try again.The credentials provided are incorrect')
 
-    })
-})
-
-describe('Tela de Admin', () => {
-
-    before(() => {
-        cy.login('Admin', 'admin123')
-    })
-
-//TODO Terminar o cadastro de usuário Admin
-    it('Add usuário Admin', () => {
-
-        cy.get('span').contains('Admin').click()
-        cy.contains('System Users').should('be.visible')
-        cy.get('button').contains(' Add ').click()
-        cy.contains('Add User').should('be.visible')
     })
 })
